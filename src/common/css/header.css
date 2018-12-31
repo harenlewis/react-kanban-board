@@ -1,5 +1,6 @@
 .header {
-    background: #e6eaec;
+    box-shadow: 0 2px 8px -3px #80808040;
+    background: #ffffff;
     height: 50px;
     padding: 6px;
     justify-content: space-between;

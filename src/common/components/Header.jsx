@@ -10,13 +10,21 @@ export default class Header extends Component {
                 <img className="header-logo" alt="logo" src={require('../../logo.png')} />
                 <div className="actions">
                     <div className="add-project">
-                        <button className="add-proj-btn">
-                           <span className="fas fa-plus"></span>
+                        <button
+                            className="add-proj-btn"
+                            onClick={this.showAddProjModal}
+                        >
+                            <span className="fas fa-plus"></span>
                             Add a Project
                         </button>
                     </div>
                 </div>
             </div>
         )
+    }
+
+    showAddProjModal = () => {
+        // fire action to trigger
+        this.props.toggleProjectModal()
     }
 }
