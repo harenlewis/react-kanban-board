@@ -1,0 +1,51 @@
+.proj-content {
+    background-color: #f6f7f7;
+    display: flex;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 25px;
+}
+
+.proj-data {
+    font-size: 15px;
+    color: #99999a;
+    text-align: left;
+}
+
+.proj-margin {
+    margin-top: 15px;
+}
+
+.proj-name {
+    display: block;
+    color: #e8703c;
+    margin-left: 10px;
+}
+
+.proj-margin-lt {
+    margin-left: 10px;
+}
+
+.proj-details {
+    display: flex;   
+}
+
+.proj-duration {
+    margin-left: 25px;
+}
+
+.proj-budget {
+    margin-left: 68px;
+}
+
+.proj-data-color {
+    color: black;
+}
+
+.proj-data-margin {
+    margin-top: 5px;
+}
+
+.proj-bottom {
+    margin-bottom: 20px;
+}

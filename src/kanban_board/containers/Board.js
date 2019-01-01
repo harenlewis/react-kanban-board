@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import Header from '../components/Header'
-import { toggleProjectModal } from '../../kanban_board/actions/'
+import { toggleProjectModal } from '../actions'
+import Board from '../components/Board';
 
 const mapStateToProps = (state) => {
     return {
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Header)
+)(Board)

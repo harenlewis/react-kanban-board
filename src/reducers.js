@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import commonReducer from './common/reducers/common'
+import kanbanReducer from './kanban_board/reducers'
 
 export default combineReducers({
-    common: commonReducer
+    kanban: kanbanReducer
 });

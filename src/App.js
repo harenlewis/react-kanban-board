@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './common/containers/Header'
+import KanbanBoard from './kanban_board/containers/Board'
 import './App.css';
 
 class App extends Component {
@@ -7,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {/* <KanbanBoard /> */}
+        <KanbanBoard />
       </div>
     );
   }

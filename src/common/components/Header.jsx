@@ -25,6 +25,6 @@ export default class Header extends Component {
 
     showAddProjModal = () => {
         // fire action to trigger
-        this.props.toggleProjectModal()
+        this.props.toggleProjectModal(true)
     }
 }
