@@ -171,20 +171,10 @@ export default class App extends Component {
             </div>
           )}
         </Droppable>
-        {/* <Droppable droppableId="droppable">
-          {(provided, snapshot) => (
-              <div
-                ref={provided.innerRef}
-                style={getListStyle(snapshot.isDraggingOver)}
-              >
-                {console.log("Provider", provided)}
-                {console.log("Snapshot", snapshot)}
-
-                {provided.placeholder}
-              </div>
-          )}
-        </Droppable> */}
       </DragDropContext>
     );
   }
 }
+
+
+// import uuid from 'uuid/v4'; let id = uuid();

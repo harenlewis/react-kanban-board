@@ -1,13 +1,18 @@
 .stage-content {
-  background-color:white;
-  flex: 0 0 300px;
-  margin-right: 20px;
-  border-radius: 6px;
-  text-align: left;
+    background-color:white;
+    flex: 0 0 300px;
+    margin-right: 20px;
+    border-radius: 6px;
+    text-align: left;
+    margin-bottom: 45px;
 }
 
 .stage-name {
     display: block;
     margin-top: 20px;
     margin-left: 18px;
+}
+
+.drag-over {
+  background-color:rgb(237, 229, 238);  
 }
