@@ -9,6 +9,7 @@
 .proj-data {
     font-size: 15px;
     color: #99999a;
+    white-space: nowrap;
     text-align: left;
 }
 
@@ -24,6 +25,7 @@
 
 .proj-margin-lt {
     margin-left: 10px;
+    font-size: 15px;
 }
 
 .proj-details {

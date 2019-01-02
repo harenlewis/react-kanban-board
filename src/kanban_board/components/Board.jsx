@@ -16,6 +16,7 @@ export default class Board extends Component {
                                 <Stage
                                     key={index}
                                     name={stageDetails.name}
+                                    projects={stageDetails.projects}
                                 />
                             )
                         })}
