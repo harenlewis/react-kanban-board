@@ -20,7 +20,9 @@ export default class Stage extends Component {
                                 let projectDetails = boardData.projectsById[project]
                                 return (
                                     <ProjectCard 
+                                        index={index}
                                         key={index}
+                                        draggableId={project}
                                         {...projectDetails}
                                     />
                                 )

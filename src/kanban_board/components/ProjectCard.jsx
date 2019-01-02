@@ -5,20 +5,19 @@ import '../css/project_card.css'
 
 export default class ProjectCard extends Component {
     render() {
-        const { name, stage, type, duration, budget, producer } = this.props;
+        const { name, stage, type, duration, budget, producer, draggableId, index } = this.props;
         const stageDetails = boardData.stagesById[stage]
         return (
             <Draggable
-                draggableId="proj-1"
-                key={Math.random()}
-                index={parseInt(Math.random())}
+                draggableId={draggableId}
+                index={index}
             >
                 {(provided, snapshot) => (
                     <div
                         ref={provided.innerRef}
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
-                        className="proj-content">
+                        className={`proj-content ${snapshot.isDragging ? "dragging" : ""}`}>
                         <div className="proj">
                             <span className="proj-margin proj-name">{name}</span>
                             <div className="proj-margin-lt proj-margin">{stageDetails.name}</div>
