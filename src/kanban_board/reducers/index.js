@@ -67,11 +67,13 @@ const INITIAL_STATE = {
     }
 }
 
-export default function(state = INITIAL_STATE, action) {
-        switch (action.type) {
-            case KanbanActions.TOGGLE_PROJECT_MODAL:
-                return { ...state, toggelProjectModal: true }
-            default:
-                return state
-        }
+export default function (state = INITIAL_STATE, action) {
+    switch (action.type) {
+        case KanbanActions.TOGGLE_PROJECT_MODAL:
+            return { ...state, toggelProjectModal: true }
+        case KanbanActions.REORDER_PROJECTS:
+            return { ...state, }
+        default:
+            return state
     }
+}

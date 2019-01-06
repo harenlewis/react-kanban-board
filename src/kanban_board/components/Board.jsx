@@ -27,13 +27,13 @@ export default class Board extends Component {
     }
 
     onDragEnd = result => {
-        console.log(result)
         const { source, destination } = result;
 
         // dropped outside the list
         if (!destination) {
             return;
         }
+        this.props.reorderProjects(result)
 
         if (source.droppableId === destination.droppableId) {
             // when dropped within the same droppable
@@ -51,7 +51,7 @@ export default class Board extends Component {
 
             // this.setState(state);
         } else {
-            // when dropped within the diff droppable
+        // when dropped in diff droppable
         //     const result = move(
         //         this.getList(source.droppableId),
         //         this.getList(destination.droppableId),

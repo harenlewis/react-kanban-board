@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { toggleProjectModal } from '../actions'
+import { toggleProjectModal, reorderProjects } from '../actions'
 import Board from '../components/Board';
 
 const mapStateToProps = (state) => {
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ toggleProjectModal }, dispatch)
+    return bindActionCreators({ toggleProjectModal, reorderProjects }, dispatch)
 }
 
 export default connect(
