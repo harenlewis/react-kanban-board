@@ -5,7 +5,9 @@ import Board from '../components/Board';
 
 const mapStateToProps = (state) => {
     return {
-        showProjectModal: state.kanban.toggelProjectModal
+        showProjectModal: state.kanban.toggelProjectModal,
+        stages: state.kanban.stages,
+        stagesById: state.kanban.stagesById
     }
 }
 

@@ -7,7 +7,7 @@ import boardData from '../../stores/board-data';
 
 export default class Stage extends Component {
     render() {
-        const { name, projects } = this.props;
+        const { name, projects, projectsById } = this.props;
         return (
             <Droppable droppableId={`droppable-${name}`}>
                 {(provided, snapshot) => (
@@ -17,7 +17,7 @@ export default class Stage extends Component {
                         <div className="stage">
                             <span className="stage-name"> {name} </span>
                             {projects.map((project, index) => {
-                                let projectDetails = boardData.projectsById[project]
+                                let projectDetails = projectsById[project]
                                 return (
                                     <ProjectCard 
                                         index={index}
@@ -27,7 +27,6 @@ export default class Stage extends Component {
                                     />
                                 )
                             })}
-                            
                         </div>
                     </div>
                 )}
