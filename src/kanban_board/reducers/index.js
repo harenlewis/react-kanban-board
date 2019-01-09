@@ -72,7 +72,49 @@ export default function (state = INITIAL_STATE, action) {
         case KanbanActions.TOGGLE_PROJECT_MODAL:
             return { ...state, toggelProjectModal: true }
         case KanbanActions.REORDER_PROJECTS:
-            return { ...state, }
+            const { source, destination } = action.payload.dragData;
+
+            if (source.droppableId === destination.droppableId) {
+                const startIndex = source.index,
+                    endIndex = destination.index;
+                const list = state.stagesById[destination.droppableId].projects
+                const result = Array.from(list);
+                const [removed] = result.splice(startIndex, 1);
+                result.splice(endIndex, 0, removed);
+                return {
+                    ...state,
+                    stagesById: {
+                        ...state.stagesById,
+                        [destination.droppableId]: {
+                            ...state.stagesById[destination.droppableId],
+                            projects: result
+                        }
+                    }
+                }
+            } else {
+                const sourceProjects = state.stagesById[source.droppableId].projects
+                const destinationProjects = state.stagesById[destination.droppableId].projects
+
+                const sourceClone = Array.from(sourceProjects);
+                const destClone = Array.from(destinationProjects);
+                const [removed] = sourceClone.splice(source.index, 1);
+
+                destClone.splice(destination.index, 0, removed);
+                return {
+                    ...state,
+                    stagesById: {
+                        ...state.stagesById,
+                        [destination.droppableId]: {
+                            ...state.stagesById[destination.droppableId],
+                            projects: destClone
+                        },
+                        [source.droppableId]: {
+                            ...state.stagesById[source.droppableId],
+                            projects: sourceClone
+                        },
+                    }
+                }
+            }
         default:
             return state
     }

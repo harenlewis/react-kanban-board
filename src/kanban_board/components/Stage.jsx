@@ -6,9 +6,9 @@ import '../css/stage.css'
 
 export default class Stage extends Component {
     render() {
-        const { name, projects, projectsById } = this.props;
+        const { name, projects, projectsById, stageId } = this.props;
         return (
-            <Droppable droppableId={`droppable-${name}`}>
+            <Droppable droppableId={stageId}>
                 {(provided, snapshot) => (
                     <div
                         ref={provided.innerRef}
@@ -18,7 +18,7 @@ export default class Stage extends Component {
                             {projects.map((project, index) => {
                                 let projectDetails = projectsById[project]
                                 return (
-                                    <ProjectCard 
+                                    <ProjectCard
                                         index={index}
                                         key={index}
                                         draggableId={project}

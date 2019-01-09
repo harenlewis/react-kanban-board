@@ -14,6 +14,7 @@ export default class Board extends Component {
                             let stageDetails = stagesById[stage]
                             return (
                                 <Stage
+                                    stageId={stage}
                                     key={index}
                                     name={stageDetails.name}
                                     projects={stageDetails.projects}
